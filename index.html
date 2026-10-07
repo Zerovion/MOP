@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Who runs the grid? Ministry of Power, explained</title>
+<style>
+:root{--p:#f4f6ff;--c:#fff;--i:#0f1733;--r:#d9480f;--oa:#fff;--m:#5a6384;--ln:rgba(40,70,170,.07);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--p:#0a0f1f;--c:#121a33;--i:#eef2ff;--r:#ffd23f;--oa:#0a0f1f;--m:#8d98bd;--ln:rgba(120,150,255,.08)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--p) repeating-linear-gradient(transparent 0 31px,var(--ln) 31px 32px);color:var(--i);font:17px/1.55 "Segoe UI",system-ui,sans-serif}
+body.big{font-size:21px}
+h1,h2,h3,h4{font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;margin:0;line-height:1.15}
+.mono{font-family:ui-monospace,Consolas,Menlo,monospace}
+.hand{font-family:"Segoe Print","Bradley Hand","Marker Felt","Comic Sans MS",cursive;color:var(--r);line-height:1.4}
+.w{max-width:1100px;margin:0 auto;padding:18px 18px 40px}
+header{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:flex-end;justify-content:space-between;border-bottom:3px double var(--i);padding-bottom:12px;margin-bottom:18px}
+header h1{font-size:2.1em}
+header p{margin:4px 0 0;color:var(--m)}
+nav{display:flex;flex-wrap:wrap;gap:8px}
+button{font:inherit;color:inherit;cursor:pointer}
+.tab{background:var(--c);border:2px solid var(--i);border-radius:14px 4px 12px 4px/4px 12px 4px 14px;padding:4px 14px;margin:2px 4px 2px 0}
+.tab.on,.tab:hover{background:var(--i);color:var(--p)}
+button:focus-visible{outline:3px solid var(--r);outline-offset:2px}
+.top{display:inline-block;border:3px solid var(--r);border-radius:6px 18px 6px 18px;padding:6px 22px;margin:6px 0 18px;background:var(--c)}
+.top h2{font-size:1.6em}
+.note{margin:0 0 4px;transform:rotate(-1deg)}
+.cl{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px 26px;align-items:start}
+.cl section:nth-child(2){margin-top:14px}.cl section:nth-child(4){margin-top:10px}
+.cl h3{border-bottom:3px solid var(--g);padding-bottom:3px;margin-bottom:2px}
+.cl .hand{margin:0 0 8px;font-size:.9em}
+.chip{display:block;width:100%;text-align:left;background:var(--c);border:2px solid var(--g);border-radius:12px 3px 10px 3px/3px 10px 3px 12px;padding:6px 12px;margin-bottom:8px}
+.chip b{display:block;color:var(--g);filter:brightness(1.05)}
+.chip span{font-size:.88em;color:var(--m)}
+.chip:hover,.chip.ok{background:var(--g);color:#fff}.chip:hover b,.chip:hover span,.chip.ok b,.chip.ok span{color:#fff}
+.chip.no{border-style:dashed;border-color:var(--r);opacity:.8}
+.dt{display:grid;grid-template-columns:1fr 1.25fr;gap:26px;margin-top:12px}
+@media(max-width:760px){.dt,.fw{grid-template-columns:1fr!important}header h1{font-size:1.7em}}
+.dt h2{font-size:2.6em;color:var(--g)}
+.sub{margin:2px 0 8px;color:var(--m);font-size:.9em}
+.role{font-family:Georgia,serif;font-size:1.25em;font-style:italic;margin:0 0 16px}
+.dt h4{margin:14px 0 4px;font-size:1.05em;border-bottom:1px solid var(--i);display:inline-block}
+.note2{margin-top:20px;padding-left:12px;border-left:3px solid var(--r);transform:rotate(-.6deg)}
+.sc{background:var(--c);border:2px solid var(--i);border-radius:16px 4px 16px 4px/4px 16px 4px 16px;padding:8px;--k:var(--g)}
+.sc svg{display:block;width:100%;height:auto}
+.how{margin:10px 0}
+.ln{stroke:var(--i);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.fl{fill:var(--c)}.rd{stroke:var(--r)}
+.t{font:11px ui-monospace,Consolas,monospace;fill:var(--i)}
+.spin{animation:spin 2.5s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.sm circle{fill:var(--m);animation:rise 2s ease-out infinite}@keyframes rise{from{transform:translateY(0);opacity:.9}to{transform:translateY(-34px);opacity:0}}
+.dr circle{fill:#4a8fd0;animation:fall 1.6s ease-in infinite}@keyframes fall{from{transform:translateY(0);opacity:1}to{transform:translateY(46px);opacity:0}}
+.dash{stroke-dasharray:6 6;animation:dash 1s linear infinite}@keyframes dash{to{stroke-dashoffset:-12}}
+.pl{fill:var(--r);animation:mv 3s linear infinite}@keyframes mv{from{transform:translateX(0)}to{transform:translateX(var(--d))}}
+.draw{stroke-dasharray:100;animation:draw 4s ease-in-out infinite}@keyframes draw{from{stroke-dashoffset:100}65%,to{stroke-dashoffset:0}}
+.tilt{animation:tilt 3s ease-in-out infinite}@keyframes tilt{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+.bar{transform-box:fill-box;transform-origin:bottom;animation:grow 1.6s ease-out both}@keyframes grow{from{transform:scaleY(0)}}
+.fw{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:16px 0 8px}
+.stp{background:var(--c);border:2px solid var(--i);border-radius:10px 3px 10px 3px;padding:8px 10px}
+.stp h3{font-size:1.05em;margin:2px 0 6px}.stp small{color:var(--m)}
+.pw{width:100%;height:auto;margin-bottom:10px}
+.qz{max-width:560px}.qz h2{margin:6px 0 16px;font-size:1.6em}
+#fb{min-height:3em}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:22px;align-items:center;margin-bottom:26px;padding:20px;background:var(--c);border:2px solid var(--i);border-radius:20px 5px 22px 5px/5px 22px 5px 20px}
+.hero h2{font-size:2.1em;margin-bottom:8px}.hero p{margin:0 0 14px}.hero svg{width:100%;height:auto}
+.go{background:var(--r);color:var(--p);border:0;border-radius:999px;padding:10px 24px;font-weight:700;box-shadow:0 3px 0 rgba(0,0,0,.3);transition:transform .15s}
+.go:hover{transform:translateY(-2px)}
+.bar2{height:8px;background:var(--ln);border-radius:9px;overflow:hidden;margin:14px 0 4px;border:1px solid var(--m)}.bar2 i{display:block;height:100%;background:var(--r);transition:width .4s}
+.chip{position:relative;transition:transform .15s}.chip:hover{transform:translateY(-2px) rotate(-.4deg)}
+.chip.seen:after{content:"seen";position:absolute;right:10px;top:8px;font:11px ui-monospace,monospace;color:var(--g)}
+.band{background:var(--g);color:#fff;font-weight:600;border-radius:14px 3px 14px 3px;padding:2px 12px;display:inline-block;font-size:.85em;margin-bottom:8px}
+.nv{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;align-items:center}
+.paused *{animation-play-state:paused!important}
+.v{animation:vin .3s ease-out}@keyframes vin{from{opacity:0;transform:translateY(8px)}}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+body{background:linear-gradient(var(--ln) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,var(--ln) 1px,transparent 1px) 0 0/48px 48px,var(--p)}
+h1,h2,h3,h4{font-family:"Arial Black","Segoe UI Black","Helvetica Neue",system-ui,sans-serif;font-weight:900;letter-spacing:-.02em}
+header{border-bottom:0}header h1{font-size:2.4em;color:var(--r)}
+.tab{border:1px solid var(--m);border-radius:999px;background:transparent;padding:5px 16px}
+.tab.on,.tab:hover{background:var(--r);color:var(--oa);border-color:var(--r)}
+.hero{border:1px solid var(--m);border-radius:26px;padding:30px}.hero h2{font-size:3em;line-height:1.02}
+.go{color:var(--oa)}
+.top{border:0;background:var(--r);color:var(--oa);border-radius:14px;padding:8px 22px}
+.cl h3{border-bottom:0;border-left:8px solid var(--g);padding-left:10px;font-size:1.3em}
+.chip{background:var(--c);border:1px solid rgba(150,170,255,.25);border-left:6px solid var(--g);border-radius:12px}
+.chip b{color:var(--g)}
+.chip:hover,.chip.ok{background:var(--g);color:#fff}.chip:hover b,.chip:hover span,.chip.ok b,.chip.ok span{color:#fff}
+.band{color:#fff}
+.dt h2{font-size:4.2em;color:var(--g)}
+.sc{background:var(--c);border:1px solid var(--g);border-radius:22px;padding:16px;box-shadow:0 0 0 5px color-mix(in srgb,var(--g) 16%,transparent)}
+.sc .ln{stroke:var(--g);filter:drop-shadow(0 0 3px var(--g))}.sc .fl{fill:var(--c)}.sc .t{fill:var(--i)}.sc .rd{stroke:var(--r)}
+.pl{fill:var(--r);filter:drop-shadow(0 0 6px var(--r))}
+.stp{border:1px solid var(--m);border-radius:16px}
+.steps{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 4px}
+.stp2{display:flex;gap:8px;align-items:center;background:var(--c);border:1px solid var(--m);border-radius:999px;padding:4px 14px 4px 5px}
+.stp2 b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--m);color:var(--p);font-size:.8em}
+.stp2.on{background:var(--g);border-color:var(--g);color:#fff}.stp2.on b{background:#fff;color:var(--g)}
+.cap{min-height:3.2em;font-size:1.15em;font-weight:600;margin:8px 0}
+.sim{border:1px solid var(--g);border-radius:16px;padding:14px;margin:12px 0;background:var(--c)}.sim h4{margin-bottom:8px}.sim input{width:100%;accent-color:var(--g)}
+.gauge{height:14px;border-radius:9px;background:linear-gradient(90deg,#ff6b81 0 45%,#22d6c8 45% 52.5%,#ff6b81 52.5%);position:relative;margin:14px 0}
+.gauge i{position:absolute;top:-5px;width:6px;height:24px;background:var(--i);border-radius:3px;transition:left .25s}
+.fq{font-size:2.4em;font-weight:800}
+.mp{fill:var(--r)}.fade{animation:fin 1s both}@keyframes fin{from{opacity:0}}
+.hit{animation:hit 1.6s ease-in-out infinite}@keyframes hit{0%,55%,100%{transform:rotate(-24deg)}70%{transform:rotate(8deg)}}
+.fl2{transform-box:fill-box;transform-origin:50% 100%;animation:fl2 .45s ease-in-out infinite alternate}@keyframes fl2{to{transform:scaleY(1.3)}}
+.bl{animation:bl 1.8s ease-in-out infinite alternate}@keyframes bl{from{opacity:.12}}
+.rod{animation:rod 2.4s ease-in-out infinite alternate}@keyframes rod{to{transform:translateY(14px)}}
+.pu{transform-box:fill-box;transform-origin:center;animation:pu 1.2s ease-in-out infinite alternate}@keyframes pu{to{transform:scale(1.35)}}
+.sc .hl{fill:var(--r);font-size:15px;font-weight:700}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head>
+<body><div class="w">
+<header><div><h1>Who runs the grid?</h1><p>The Ministry of Power and the bodies under it, for EE3114</p></div>
+<nav><button class="tab on" data-v="map">Map</button><button class="tab" data-v="flow">Plant to plug</button><button class="tab" data-v="quiz">Quiz</button><button class="tab" data-th>Light or dark</button><button class="tab" data-big>Big text</button></nav></header>
+<main id="m"></main>
+<p class="mono" style="margin-top:36px;color:var(--m);font-size:.85em">Based on RPS Lecture 1, EE3114. Keys: arrows to browse, Esc for the map, F for fullscreen.</p>
+</div>
+<script>
+const M=document.getElementById('m');
+const G={plan:['Plan and regulate','#3d63e0','who sets the rules'],gen:['Generation','#d98200','where power is made'],grid:['Grid and operation','#0f9e93','how it travels and stays steady'],fin:['Finance and trade','#e0405a','who pays, who sells'],eff:['Efficiency, research, training','#5a9a14','making the system better']};
+const T=(x,y,t,a='middle',k='')=>`<text x="${x}" y="${y}" class="t ${k}" text-anchor="${a}">${t}</text>`;
+const V=c=>`<svg viewBox="0 0 320 160">${c}</svg>`;
+const L=(d,c='')=>`<path class="ln ${c}"${c.includes('draw')?' pathLength="100"':''} d="${d}"/>`;
+const R=(x,y,w,h,c='ln fl',r=3,st='')=>`<rect class="${c}" x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}"${st?` style="${st}"`:''}/>`;
+const C=(x,y,r,c='ln fl')=>`<circle class="${c}" cx="${x}" cy="${y}" r="${r}"/>`;
+const MP=(d,b=0,u=2.4)=>`<circle class="mp" r="3.5"><animateMotion dur="${u}s" begin="${b}s" repeatCount="indefinite" path="${d}"/></circle>`;
+const PY=(x,y=96)=>L(`M${x} ${y}L${x-12} 144M${x} ${y}L${x+12} 144M${x-8} ${y+24}H${x+8}`);
+const SP=(x,y,r=18)=>`<g class="spin" style="transform-origin:${x}px ${y}px">${L(`M${x} ${y-r}V${y+r}M${x-r} ${y}H${x+r}`)}</g>`;
+const SM=(x,y)=>`<g class="sm"><circle cx="${x}" cy="${y}" r="5"/><circle cx="${x}" cy="${y}" r="5" style="animation-delay:1s"/></g>`;
+const S={
+cea:()=>V(L('M24 140V16M24 140H304')+L('M24 118C90 112 150 92 210 62S280 26 304 20','rd draw')+[70,160,250].map((x,k)=>R(x-16,124,32,16,'ln fl bl',3,`animation-delay:${k*1.2}s`)+L(`M${x-8} 124V114`)+T(x,154,['today','+5 yrs','+10 yrs'][k])).join('')+T(40,30,'Demand grows, plants are planned ahead','start')),
+cat:()=>V(C(44,56,11)+L('M44 67V104M26 82H62M44 104L30 128M44 104L58 128')+C(276,56,11)+L('M276 67V104M258 82H294M276 104L262 128M276 104L290 128')+T(44,148,'Party A')+T(276,148,'Party B')+R(120,104,80,34)+`<g class="hit" style="transform-origin:150px 100px">${L('M150 100L186 62')}${R(172,50,30,13,'ln fl',3,'transform:rotate(-48deg);transform-origin:187px 56px')}</g>`+T(160,26,'Verdict','middle','hl bl')),
+ntpc:()=>V(L('M8 140L34 108L60 140Z')+T(34,154,'Coal')+L('M62 126H84')+R(84,80,50,60)+`<path class="fl2" d="M100 140Q96 124 109 112Q112 124 118 118Q124 128 118 140Z" fill="var(--r)"/>`+R(96,34,14,46)+SM(103,30)+T(109,154,'Boiler')+L('M134 100H164','dash')+C(188,100,24)+SP(188,100,18)+T(188,154,'Turbine')+L('M212 100H232')+C(250,100,18)+T(250,104,'G')+T(256,154,'Generator')+L('M268 100H294')+PY(298,60)),
+nhpc:()=>V(`<path d="M8 56H122V140H8Z" fill="#4a8fd0" opacity=".25"/>`+L('M8 56Q22 50 36 56T64 56T92 56T122 56','dash')+`<path class="ln fl" d="M122 28H150L176 140H122Z"/>`+T(60,100,'Reservoir')+T(144,154,'Dam')+L('M138 88L198 122M148 78L206 112')+MP('M142 90L202 124',0,1.6)+MP('M142 90L202 124',.8,1.6)+C(216,128,16)+SP(216,128,12)+R(242,110,36,32)+T(260,130,'G')+L('M278 126H296')+PY(298,70)),
+nlcl:()=>V(`<path class="ln fl" d="M8 58H44V78H76V98H108V118H150V140H8Z"/>`+T(52,126,'Mine','start')+L('M150 126L206 74','dash')+MP('M150 126L206 74',0,2)+MP('M150 126L206 74',1,2)+T(150,66,'Conveyor','start')+R(206,70,44,70)+R(222,26,12,44)+SM(228,22)+T(228,154,'Boiler house')+L('M250 104H290')+PY(296,70)),
+npc:()=>V(`<path class="ln fl" d="M20 140V92Q20 40 76 40T132 92V140Z"/>`+R(52,96,48,36)+`<circle class="pu" cx="76" cy="114" r="9" fill="var(--r)"/>`+[64,76,88].map(x=>`<g class="rod">${L(`M${x} 58V92`)}</g>`).join('')+T(76,154,'Reactor')+L('M132 100H160','dash')+C(184,100,22)+SP(184,100,16)+T(184,154,'Turbine')+L('M206 100H240')+`<path class="ln fl" d="M254 140Q268 104 258 64H306Q296 104 310 140Z"/>`+SM(282,58)+T(282,154,'Cooler')),
+mnres:()=>V(`<g class="spin" style="transform-origin:34px 32px">${L('M34 10V54M12 32H56M18 16L50 48M50 16L18 48')}</g>`+C(34,32,9,'ln fl rd')+`<path class="ln fl" d="M16 104H78L90 134H4Z"/>`+L('M28 104L22 134M47 104V134M66 104L72 134M10 119H84')+L('M90 124H206','dash')+L('M150 140V74')+`<g class="spin" style="transform-origin:150px 70px">${L('M150 70V42M150 70L174 84M150 70L126 84')}</g>`+L('M150 140H206','dash')+R(206,98,44,34)+T(228,119,'Inverter')+L('M250 115H290')+PY(296,70)+T(48,152,'Solar')+T(150,154,'Wind')),
+rldc:()=>V(L('M16 140H168')+[40,64,88,104,96,72,48,60].map((h,k)=>R(24+k*18,140-h,12,h,'bar',1,`fill:var(--k);animation-delay:${k*.15}s`)).join('')+T(92,154,'Day-ahead schedule')+L('M196 118A44 44 0 0 1 284 118')+`<g class="tilt" style="transform-origin:240px 118px">${L('M240 118V80','rd')}</g>`+C(240,118,5)+T(240,138,'49.9 to 50.05 Hz')+T(240,154,'Live balance')),
+reb:()=>V(`<ellipse class="ln fl" cx="160" cy="80" rx="70" ry="32"/>`+T(160,84,'REB')+[[50,34,'A'],[270,34,'B'],[50,126,'C'],[270,126,'D']].map(([x,y,l])=>C(x,y,16)+T(x,y+4,l)).join('')+MP('M90 80a70 32 0 1 1 140 0a70 32 0 1 1-140 0',0,4)+MP('M90 80a70 32 0 1 1 140 0a70 32 0 1 1-140 0',2,4)+T(160,154,'Neighbouring states share one table')),
+pfc:()=>V(`<path class="ln fl" d="M10 74L50 52L90 74Z"/>`+R(14,74,72,52,'ln fl',0)+[24,44,64].map(x=>L(`M${x+4} 82V120`)).join('')+T(50,142,'PFC')+R(230,84,60,46)+R(244,46,12,38)+SM(250,42)+T(260,148,'Project')+L('M96 96H224','dash')+MP('M96 96H224',0,2.2)+MP('M96 96H224',1.1,2.2)+T(160,86,'Loan')+L('M224 120H96','dash')+MP('M224 120H96',.5,2.2)+MP('M224 120H96',1.6,2.2)+T(160,140,'Repayment')),
+rec:()=>V(R(10,70,52,52)+T(36,100,'REC')+L('M62 90H300')+[100,160,220].map(x=>L(`M${x} 70V130M${x-9} 80H${x+9}`)).join('')+[130,190,250].map((x,k)=>`<path class="ln fl" d="M${x-16} 130V108L${x} 92L${x+16} 108V130Z"/><rect class="bl" x="${x-5}" y="110" width="10" height="12" fill="var(--r)" style="animation-delay:${k*.6}s"/>`).join('')+MP('M62 90H300',0,3)+T(190,152,'Villages get connected')),
+ptc:()=>V(R(10,52,76,56)+T(48,78,'Surplus')+T(48,94,'state')+R(234,52,76,56)+T(272,78,'Needy')+T(272,94,'state')+`<rect class="ln fl rd" x="120" y="44" width="80" height="72" rx="14"/>`+T(160,84,'PTC')+L('M86 80H120M200 80H234')+L('M48 108V132H272V108','dash')+MP('M48 108V132H272V108',0,3)+T(160,150,'power')+L('M272 52V28H48V52','dash')+MP('M272 52V28H48V52',1.5,3)+T(160,20,'payment')),
+bee:()=>V(R(10,54,110,40,'ln fl',6)+L('M24 82H106')+L('M30 104L24 128M60 100V132M96 104L102 128','dash')+[0,1,2,3,4].map(k=>`<polygon class="bl" transform="translate(${28+k*16} 36)" style="animation-delay:${k*.3}s" fill="var(--r)" points="0,-9 2.6,-3 9,-3 4,1.5 6,8 0,4 -6,8 -4,1.5 -9,-3 -2.6,-3"/>`).join('')+L('M180 140H310')+R(196,40,36,100,'bar',1,'fill:var(--m)')+R(256,90,36,50,'bar',1,'fill:var(--k);animation-delay:.5s')+T(214,154,'Unrated')+T(274,154,'5-star')+T(252,28,'Energy used')),
+cpri:()=>V(`<rect class="ln fl" x="14" y="66" width="130" height="72" rx="4" stroke-dasharray="6 4"/>`+R(44,92,70,40)+[56,79,102].map(x=>C(x,112,9)).join('')+L('M79 92V70')+C(79,62,6)+`<path class="ln rd bl" d="M79 56L68 34L84 34L72 10"/>`+T(79,154,'High-voltage test')+R(214,34,84,84)+L('M226 54H286M226 68H286M226 82H264')+L('M236 106L246 114L266 96','rd draw')+T(256,146,'Certified')),
+npti:()=>V(C(40,56,12)+L('M40 68V108M40 80L70 96M40 108L24 136M40 108L56 136')+R(70,70,92,60)+R(78,78,76,40,'ln fl rd')+L('M82 100C92 82 100 114 110 96S126 84 150 94','rd draw')+T(116,148,'Simulator')+L('M206 128H304')+[30,52,72].map((h,k)=>R(214+k*30,128-h,20,h,'bar',1,`fill:var(--k);animation-delay:${k*.5}s`)).join('')+T(252,148,'Skill grows')),
+ctrl:()=>{const n=[[80,18,'N'],[142,36,'NE'],[22,70,'W'],[142,104,'E'],[80,134,'S']];return `<svg viewBox="0 0 320 160">${n.map(([x,y],k)=>`<path class="ln" d="M${x} ${y}L80 76"/><circle class="mp" r="3.5"><animateMotion dur="2.2s" begin="${k*.45}s" repeatCount="indefinite" path="M${x} ${y}L80 76"/></circle>`).join('')}${n.map(([x,y,l])=>`<circle class="ln fl" cx="${x}" cy="${y}" r="12"/><text x="${x}" y="${y+4}" class="t" text-anchor="middle">${l}</text>`).join('')}<circle class="ln fl rd" cx="80" cy="76" r="18"/><text x="80" y="80" class="t" text-anchor="middle">NLDC</text><rect class="ln fl" x="176" y="20" width="136" height="120" rx="8"/><text x="186" y="40" class="t">Frequency</text><path class="ln" d="M186 84H302" opacity=".35"/><path class="ln rd draw" pathLength="100" d="M186 84q9-24 18 0t18 0t18 0t18 0t18 0t18 0"/><text x="186" y="124" class="t" style="font-size:16px;font-weight:700">50.00 Hz</text></svg>`},
+grid:()=>{const n={N:[150,26],W:[56,76],E:[190,82],NE:[270,52],S:[136,134]},L=[['N','W'],['N','E'],['W','E'],['E','NE'],['W','S'],['E','S'],['N','NE']];return `<svg viewBox="0 0 320 160">${L.map(([a,b],k)=>{const d=`M${n[a]}L${n[b]}`.replace(/,/g,' ');return `<path class="ln" d="${d}"/><circle class="mp" r="3.5"><animateMotion dur="2.6s" begin="${k*.37}s" repeatCount="indefinite" path="${d}"/></circle>`}).join('')}${Object.entries(n).map(([l,[x,y]])=>`<rect class="ln fl" x="${x-24}" y="${y-12}" width="48" height="24" rx="6"/><text x="${x}" y="${y+4}" class="t" text-anchor="middle">${l} grid</text>`).join('')}<text x="8" y="154" class="t">One national grid, five regions</text></svg>`},
+tariff:()=>{const b=[['Capital cost',45],['Fuel',40],['Upkeep',25],['Return',15]];let y=140;return `<svg viewBox="0 0 320 160"><text x="40" y="10" class="t">Tariff per unit</text>${b.map(([l,h],k)=>{y-=h;return `<rect class="bar" x="40" y="${y}" width="90" height="${h}" fill="var(--k)" opacity="${1-k*.18}" stroke="var(--c)" style="animation-delay:${k*.5}s"/><text x="146" y="${y+h/2+4}" class="t">${l}</text><text x="262" y="${y+h/2+5}" class="t fade" style="fill:var(--r);font-size:15px;animation-delay:${k*.5+.9}s">checked</text>`}).join('')}<path class="ln" d="M20 15V140H134" opacity=".4"/></svg>`},
+
+gen:k=>`<svg viewBox="0 0 320 160"><rect class="ln fl" x="14" y="70" width="70" height="70"/><text x="49" y="109" class="t" text-anchor="middle">${k}</text>${k=='Uranium'?'':'<g class="sm"><circle cx="38" cy="62" r="5"/><circle cx="60" cy="62" r="5" style="animation-delay:.9s"/></g>'}<path class="ln dash" d="M84 100H130"/><circle class="ln fl" cx="160" cy="100" r="28"/><g class="spin" style="transform-origin:160px 100px"><path class="ln" d="M160 76V124M136 100H184"/></g><path class="ln" d="M188 100H266"/><path class="ln" d="M270 58L256 140M270 58L284 140M259 100H281"/><text x="270" y="155" class="t" text-anchor="middle">Grid</text></svg>`,
+hydro:()=>`<svg viewBox="0 0 320 160"><path class="ln fl" d="M16 30H64L96 140H16Z"/><text x="36" y="100" class="t">Dam</text><g class="dr"><circle cx="106" cy="58" r="4"/><circle cx="116" cy="50" r="4" style="animation-delay:.5s"/><circle cx="126" cy="56" r="4" style="animation-delay:1s"/></g><circle class="ln fl" cx="150" cy="122" r="24"/><g class="spin" style="transform-origin:150px 122px"><path class="ln" d="M150 100V144M128 122H172"/></g><path class="ln" d="M174 122H266"/><path class="ln" d="M270 58L256 140M270 58L284 140M259 100H281"/><text x="270" y="155" class="t" text-anchor="middle">Grid</text></svg>`,
+wire:()=>`<svg viewBox="0 0 320 160"><rect class="ln fl" x="8" y="80" width="40" height="50"/><text x="28" y="148" class="t" text-anchor="middle">Plant</text><path class="ln" d="M28 80V60H280"/>${[95,165,235].map(x=>`<path class="ln" d="M${x} 60L${x-12} 132M${x} 60L${x+12} 132M${x-8} 96H${x+8}"/>`).join('')}<path class="ln fl" d="M274 130V86H292V130ZM292 130V100H310V130Z"/><text x="292" y="148" class="t" text-anchor="middle">City</text><circle class="pl" r="5" cx="28" cy="60" style="--d:248px"/></svg>`,
+curve:()=>`<svg viewBox="0 0 320 160"><path class="ln" d="M20 140V20M20 140H300" opacity=".45"/><path class="ln draw" pathLength="100" d="M20 110C60 60 90 40 120 70S190 130 220 60S270 40 300 50"/><path class="ln rd draw" pathLength="100" style="animation-delay:.3s" d="M20 112C62 64 92 46 122 74S192 128 222 66S272 46 300 54"/><text x="26" y="156" class="t">Demand (ink) and generation (red) move together</text><text x="268" y="20" class="t">50 Hz</text></svg>`,
+scale:(a,b)=>`<svg viewBox="0 0 320 160"><path class="ln" d="M160 140V50M130 140H190"/><g class="tilt" style="transform-origin:160px 50px"><path class="ln" d="M70 50H250"/><path class="ln fl" d="M70 50L50 100H92ZM250 50L232 100H274Z"/><text x="70" y="118" class="t" text-anchor="middle">${a}</text><text x="252" y="118" class="t" text-anchor="middle">${b}</text></g></svg>`,
+bars:(a,b,h1,h2)=>`<svg viewBox="0 0 320 160"><path class="ln" d="M20 140H300"/><rect class="bar" x="70" y="${140-h1}" width="64" height="${h1}" fill="var(--k)"/><rect class="bar" x="190" y="${140-h2}" width="64" height="${h2}" fill="var(--r)" style="animation-delay:.4s"/><text x="102" y="156" class="t" text-anchor="middle">${a}</text><text x="222" y="156" class="t" text-anchor="middle">${b}</text></svg>`,
+flow:(a,b,c)=>{const x=(p,t)=>`<rect class="ln fl" x="${p}" y="55" width="86" height="50" rx="3"/><text x="${p+43}" y="84" class="t" text-anchor="middle">${t}</text>`;return `<svg viewBox="0 0 320 160">${x(6,a)+x(117,b)+x(228,c)}<path class="ln dash" d="M92 80H117M203 80H228"/><circle class="pl" r="5" cx="92" cy="80" style="--d:136px"/><circle class="pl" r="5" cx="92" cy="80" style="--d:136px;animation-delay:1.5s"/></svg>`}};
+const O=[
+{i:'CEA',g:'plan',f:'Central Electricity Authority',r:'National power planning',p:'Someone has to decide how many plants and lines the country needs before the demand shows up.',h:'It studies how demand is growing and writes the National Electricity Plan for generation and transmission.',w:['CERC','PGCIL','NTPC'],d:'Preparing the National Electricity Plan is a duty the Electricity Act, 2003 gives to the CEA.',s:['cea']},
+{i:'CERC',g:'plan',f:'Central Electricity Regulatory Commission',r:'Tariff, legal and regulatory issues',p:'Generators want a good price and consumers want a low one. A neutral body has to fix the number.',h:'It examines what a central generator or transmission line really costs and fixes a tariff that is fair to both sides.',w:['CAT','NTPC','PGCIL'],d:'Appeals against a regulator’s order go to an appellate tribunal, not back to the regulator.',s:['tariff']},
+{i:'CAT',g:'plan',f:'Central Administrative Tribunal',r:'Adjusts or arbitrates disputes',p:'When two parties cannot agree, someone independent has to decide.',h:'Both sides present their case and the tribunal gives a binding verdict.',w:['CERC'],d:'Check with your faculty: strictly, CAT hears central-government service matters, and electricity appeals go to APTEL. This app follows the lecture slide.',s:['cat']},
+{i:'NTPC',g:'gen',f:'National Thermal Power Corporation',r:'Thermal generation',p:'Turning fuel into bulk electricity, day and night.',h:'Coal burns in the boiler, steam spins the turbine, the generator makes power, and it leaves for the grid.',w:['PGCIL','NLDC','PFC'],d:'NTPC is India’s largest power-generating company.',s:['ntpc']},
+{i:'NHPC',g:'gen',f:'National Hydro Power Corporation',r:'Hydro generation',p:'Using water, a fuel that costs nothing, to make power that can start up in minutes.',h:'Water stored behind the dam drops through a pipe called a penstock and spins the turbine.',w:['PGCIL','RLDC','CEA'],d:'Hydro units can ramp up quickly, which helps when demand peaks.',s:['nhpc']},
+{i:'NLCL',g:'gen',f:'Neyveli Lignite Corporation',r:'Lignite generation',p:'Lignite is a poor, bulky fuel. It makes sense to burn it right next to the mine.',h:'Lignite from the mine feeds the boiler. Steam, turbine and generator do the rest.',w:['PGCIL','NLDC'],d:'Its operations are based at Neyveli in Tamil Nadu.',s:['nlcl']},
+{i:'NPC',g:'gen',f:'Nuclear Power Corporation of India Ltd.',r:'Nuclear generation',p:'Making steady power from a very small amount of fuel.',h:'Fission heats water into steam, the steam spins the turbine, and the plant runs steadily as base load.',w:['PGCIL','NLDC'],d:'Tarapur, running since 1969, was India’s first nuclear power station.',s:['npc']},
+{i:'MNRES',g:'gen',f:'Ministry of New and Renewable Energy Sources',r:'Renewable energy development',p:'Getting solar, wind and other clean sources onto the grid.',h:'Panels and turbines produce power, an inverter conditions it, and it is fed into the grid.',w:['PGCIL','CEA'],d:'This is a separate ministry, not part of MoP. Your slide lists it beside MoP’s bodies.',s:['mnres']},
+{i:'PGCIL',g:'grid',f:'Power Grid Corporation of India Ltd.',r:'Central transmission utility and grid operator',p:'Plants are far from cities. Power needs highways.',h:'It builds and runs the high-voltage lines and substations that carry power between states.',w:['NLDC','RLDC','CERC'],d:'The national grid was synchronised in December 2013, when the southern region joined the rest.',s:['grid']},
+{i:'NLDC',g:'grid',f:'National Load Dispatch Centre',r:'Operation of all regional links',p:'Supply must match demand every second, or the frequency drifts away from 50 Hz.',h:'It watches the whole system, coordinates the regional centres, and asks generators to raise or lower output.',w:['RLDC','PGCIL'],d:'It is run by Grid-India, which used to be called POSOCO.',s:['ctrl']},
+{i:'RLDC',g:'grid',f:'Regional Load Dispatch Centre',r:'Regional grid operation',p:'Every region needs a control room of its own.',h:'It schedules generation in its region, balances it against demand, and reports upward to the national centre.',w:['NLDC','REB'],d:'India has five: Northern, Western, Southern, Eastern and North-Eastern.',s:['rldc']},
+{i:'REB',g:'grid',f:'Regional Electricity Board',r:'Coordination, planning and security studies of SEBs',p:'State grids in one region affect each other, so someone has to coordinate them.',h:'It brings the state boards together to plan and to study how secure the regional grid is.',w:['RLDC','CEA'],d:'Today much of this coordination happens in Regional Power Committees.',s:['reb']},
+{i:'PFC',g:'fin',f:'Power Finance Corporation Ltd.',r:'Funding',p:'Power projects cost a great deal and take years to pay back.',h:'It lends to power projects, and they repay it from the electricity they sell.',w:['REC','NTPC','CEA'],d:'PFC took a controlling stake in REC in 2019.',s:['pfc']},
+{i:'REC',g:'fin',f:'Rural Electrification Corporation',r:'Finance and promote rural electrification',p:'Villages are costly to connect and slow to repay.',h:'It finances lines, transformers and connections so rural areas can be electrified.',w:['PFC','CEA'],d:'REC was set up in 1969.',s:['rec']},
+{i:'PTC',g:'fin',f:'Power Trading Corporation',r:'Power trading',p:'A state with spare power and a state with a shortage need a go-between.',h:'It matches sellers with buyers, arranges the deal and settles the payment.',w:['CERC','PGCIL'],d:'PTC India was incorporated in 1999.',s:['ptc']},
+{i:'BEE',g:'eff',f:'Bureau of Energy Efficiency',r:'Estimate energy conservation and DSM potential',p:'The cheapest unit of power is the one nobody has to generate.',h:'It sets standards and star labels so buyers can pick appliances that do the same job on less energy.',w:['CEA','MNRES'],d:'BEE was set up in 2002 under the Energy Conservation Act, 2001.',s:['bee']},
+{i:'CPRI',g:'eff',f:'Central Power Research Institute',r:'Training and research',p:'Equipment must be proven before it goes on the grid.',h:'Equipment comes in, is tested under heavy stress, and is certified if it passes.',w:['NPTI','CEA'],d:'It is based in Bengaluru and runs high-power test labs.',s:['cpri']},
+{i:'NPTI',g:'eff',f:'National Power Training Institute',r:'Training and research',p:'The grid needs skilled operators, not only machines.',h:'Trainees practise on simulators until they can run a station or a control room safely.',w:['CPRI','NLDC'],d:'It trains engineers and operators from across the sector.',s:['npti']}];
+const seen=new Set();let cur=0,view='map';
+const HERO=`<svg viewBox="0 0 400 190"><path class="ln" d="M4 160H396"/><rect class="ln fl" x="12" y="115" width="52" height="45"/><rect class="ln fl" x="22" y="72" width="12" height="43"/><g class="sm"><circle cx="28" cy="66" r="5"/><circle cx="28" cy="66" r="5" style="animation-delay:1s"/></g><path class="ln" d="M64 72H340"/>${[120,200,280].map(x=>`<path class="ln" d="M${x} 72L${x-14} 160M${x} 72L${x+14} 160M${x-9} 116H${x+9}"/>`).join('')}<path class="ln fl" d="M330 160V105H352V160ZM352 160V85H376V160Z"/><circle class="pl" r="6" cx="64" cy="72" style="--d:276px"/><text x="12" y="180" class="t">Generate</text><text x="170" y="180" class="t">Transmit</text><text x="336" y="180" class="t">Consume</text></svg>`;
+const scene=o=>S[o.s[0]](...o.s.slice(1));
+function map(){view='map';M.innerHTML=`<div class="hero"><div><h2>Who keeps the lights on?</h2><p>${O.length} bodies work under or beside the Ministry of Power. Follow electricity from plant to plug, then open any body to see how it really works.</p><button class="go" data-st>Start the tour</button><div class="bar2"><i style="width:${seen.size/O.length*100}%"></i></div><span class="mono">${seen.size} of ${O.length} explored</span></div>${HERO}</div><div class="top"><h2>Ministry of Power</h2><span class="mono">Government of India</span></div><div class="cl">`+Object.entries(G).map(([k,[n,c,t]])=>`<section style="--g:${c}"><h3>${n}</h3><p class="hand">${t}</p>`+O.filter(o=>o.g==k).map(o=>`<button class="chip${seen.has(o.i)?' seen':''}" data-o="${o.i}"><b class="mono">${o.i}</b><span>${o.r}</span></button>`).join('')+`</section>`).join('')+`</div>`}
+const ST={
+CEA:[['Forecast','It studies how fast demand is growing in each region.'],['Plan','It works out how many plants and lines the country will need.'],['Publish','It issues the National Electricity Plan.'],['Guide','States and utilities use the plan to time their investments.']],
+CERC:[['Collect','Generators and transmission companies submit their costs.'],['Examine','CERC checks the figures and hears the objections.'],['Decide','It fixes the tariff that will be charged.'],['Review','An unhappy party can appeal the order.']],
+CAT:[['File','One party brings the dispute to the tribunal.'],['Hear','Both sides present their case.'],['Verdict','The tribunal gives its decision.'],['Comply','Both sides have to follow the order.']],
+NTPC:[['Burn','Coal burns in the boiler.'],['Steam','The heat turns water into high-pressure steam.'],['Spin','Steam spins the turbine and the generator.'],['Export','A transformer steps the voltage up for the grid.']],
+NHPC:[['Store','The dam holds a large head of water.'],['Release','Water drops down the penstock.'],['Spin','It spins the turbine.'],['Export','The generator’s output goes onto the grid.']],
+NLCL:[['Mine','Lignite is dug from the open-cast mine.'],['Feed','A conveyor carries it to the boiler next door.'],['Generate','Steam turns the turbine and generator.'],['Export','The power goes out to the grid.']],
+NPC:[['Fission','Uranium atoms split and release heat.'],['Steam','The heat turns water into steam.'],['Spin','The steam spins the turbine.'],['Steady','The plant runs around the clock as base load.']],
+MNRES:[['Promote','Sets targets and schemes for solar, wind and other sources.'],['Generate','Panels and turbines produce electricity.'],['Convert','An inverter turns it into grid-quality AC.'],['Feed','The power joins the grid.']],
+PGCIL:[['Collect','Substations take power from the plants.'],['Step up','High voltage keeps losses low on long lines.'],['Carry','Towers carry it across state borders.'],['Hand over','Substations pass it to state networks.']],
+NLDC:[['Watch','Live data from across the country arrives.'],['Compare','It compares demand with generation.'],['Act','It asks generators to raise or lower output.'],['Hold','The frequency stays close to 50 Hz.']],
+RLDC:[['Schedule','It plans the next day’s generation for its region.'],['Monitor','It tracks flows and frequency live.'],['Balance','It adjusts output to match demand.'],['Report','It keeps the national centre informed.']],
+REB:[['Meet','The state boards sit down together.'],['Study','They study how secure the regional grid is.'],['Plan','They agree on coordinated plans.'],['Share','Information moves between neighbouring states.']],
+PFC:[['Appraise','It examines the project’s finances.'],['Lend','It provides the loan.'],['Build','The project gets built.'],['Repay','The loan is repaid from electricity sales.']],
+REC:[['Survey','Unelectrified villages are identified.'],['Fund','Finance is provided for lines and transformers.'],['Connect','Homes get their connections.'],['Repay','The loans are repaid over time.']],
+PTC:[['Match','It finds a seller with spare power and a buyer in need.'],['Agree','The terms are fixed.'],['Deliver','Power flows over the grid.'],['Settle','Payment is settled.']],
+BEE:[['Set','It defines efficiency levels for appliances.'],['Label','Appliances get star ratings.'],['Choose','Buyers pick the efficient ones.'],['Save','Demand, and the energy needed, falls.']],
+CPRI:[['Receive','Equipment arrives at the lab.'],['Stress','It is tested with high voltage and short circuits.'],['Analyse','Engineers study the results.'],['Certify','Equipment that passes is certified.']],
+NPTI:[['Enrol','Engineers and operators join a course.'],['Practise','They train on simulators.'],['Assess','Their skills are tested.'],['Deploy','They go back to run stations and grids.']]};
+const SIM=`<div class="sim"><h4>Try it: hold 50 Hz</h4><label>Demand<input type="range" min="70" max="130" value="100" id="dm"></label><div class="fq mono" id="fq"></div><div class="gauge"><i id="gi"></i></div><p id="fm"></p><button class="tab" data-g="-5">Lower generation</button><button class="tab" data-g="5">Raise generation</button></div>`;
+let tm,si=0,gen=100;
+function upd(){const d=+document.getElementById('dm').value,f=50+(gen-d)*.05,ok=f>=49.9&&f<=50.05;document.getElementById('fq').textContent=f.toFixed(2)+' Hz  (generation '+gen+')';document.getElementById('gi').style.left=Math.max(0,Math.min(97,(f-49)/2*100))+'%';document.getElementById('fm').textContent=ok?'Balanced. The frequency is inside the safe band.':f<49.9?'Demand is higher than generation. Raise generation.':'Generation is higher than demand. Lower generation.'}
+function tick(){clearInterval(tm);tm=setInterval(()=>{si=(si+1)%ST[O[cur].i].length;show()},3400)}
+function show(){document.querySelectorAll('.stp2').forEach((b,k)=>b.classList.toggle('on',k==si));document.getElementById('cap').textContent=ST[O[cur].i][si][1]}
+function det(i){view='det';cur=O.findIndex(o=>o.i==i);const o=O[cur],st=ST[o.i];seen.add(o.i);gen=100;si=0;M.innerHTML=`<button class="tab" data-v="map">Back to map</button><div class="dt" style="--g:${G[o.g][1]}"><div><span class="band">${G[o.g][0]}</span><h2 class="mono">${o.i}</h2><p class="mono sub">${o.f}</p><p class="role">${o.r}</p><h4>The problem it solves</h4><p>${o.p}</p><h4>Works with</h4><div>${o.w.map(x=>`<button class="tab" data-o="${x}">${x}</button>`).join('')}</div><p class="hand note2">${o.d}</p></div><div><div class="sc" id="sc">${scene(o)}</div><div class="steps">${st.map((x,k)=>`<button class="stp2" data-s="${k}"><b class="mono">${k+1}</b><span>${x[0]}</span></button>`).join('')}</div><p class="cap" id="cap"></p><p class="how"><b>In short.</b> ${o.h}</p>${o.i=='NLDC'||o.i=='RLDC'?SIM:''}<div class="nv"><button class="tab" data-pv>Previous</button><button class="tab" data-rp>Replay</button><button class="tab" data-ps>Pause</button><button class="tab" data-ni>Next</button><span class="mono">${cur+1} of ${O.length}</span></div></div></div>`;show();tick();if(document.getElementById('dm'))upd()}
+function flow(){view='flow';const st=[['Generation',['NTPC','NHPC','NLCL','NPC','MNRES']],['Transmission',['PGCIL']],['Load dispatch',['NLDC','RLDC','REB']],['Distribution',[]],['Consumer',[]]];M.innerHTML=`<h2>From plant to plug</h2><p>Power moves through five steps. The bodies on the map sit at different points along the way.</p><div class="fw">${st.map(([n,l],k)=>`<div class="stp"><span class="mono">${k+1}</span><h3>${n}</h3>${l.map(x=>`<button class="tab" data-o="${x}">${x}</button>`).join('')||`<small>${k==3?'State discoms. Not under MoP, but this is where restructuring bites.':'That is you.'}</small>`}</div>`).join('')}</div><svg viewBox="0 0 500 16" class="pw"><path class="ln dash" d="M4 8H496"/><circle class="pl" r="6" cx="4" cy="8" style="--d:490px"/></svg><p class="hand">From the side: CEA plans the system, CERC sets the tariffs, PFC and REC pay for it, PTC trades the surplus, and BEE trims the demand.</p><p>In a restructured system these steps become separate companies: Genco, Transco and Discom.</p>`}
+const Q=[['Who finances rural electrification?','REC',['PGCIL','REC','BEE']],['Which body is the central transmission utility?','PGCIL',['PGCIL','CEA','PTC']],['Who prepares national power planning?','CEA',['CERC','NLDC','CEA']],['Who handles tariff, legal and regulatory issues?','CERC',['CERC','PFC','NPTI']],['Which body is responsible for hydro generation?','NHPC',['NTPC','NHPC','NPC']],['Who runs the grid inside one region?','RLDC',['RLDC','REB','CPRI']],['Who trades power between buyers and sellers?','PTC',['REC','PTC','BEE']],['Who estimates energy conservation and DSM potential?','BEE',['BEE','CPRI','NLCL']]];
+let qi=0,qs=0,done=false;
+function quiz(){view='quiz';if(qi>=Q.length){M.innerHTML=`<div class="qz"><h2>You scored ${qs} out of ${Q.length}</h2><p class="hand">${qs>=7?'Solid. You know your grid.':'Close. Have another go.'}</p><button class="tab" data-qr>Restart</button></div>`;return}
+const[q,a,op]=Q[qi];done=false;M.innerHTML=`<div class="qz"><p class="mono">Question ${qi+1} of ${Q.length}</p><div class="bar2"><i style="width:${qi/Q.length*100}%"></i></div><h2>${q}</h2>${op.map(x=>`<button class="chip" style="--g:var(--i)" data-a="${x}"><b class="mono">${x}</b></button>`).join('')}<p id="fb"></p></div>`}
+function go(v){clearInterval(tm);document.querySelectorAll('[data-v]').forEach(b=>b.classList.toggle('on',b.dataset.v==v&&b.closest('nav')));({map,flow,quiz}[v])();scrollTo(0,0)}
+document.addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return;const d=t.dataset;
+if('v' in d)go(d.v);else if(d.o)det(d.o);else if('rp' in d){const o=O[cur];document.getElementById('sc').innerHTML=scene(o)}
+else if('big' in d)document.body.classList.toggle('big');
+else if('th' in d){const r=document.documentElement;r.dataset.theme=r.dataset.theme=='dark'?'light':'dark'}
+else if('ps' in d){const c=document.getElementById('sc');c.classList.toggle('paused');const pz=c.classList.contains('paused');t.textContent=pz?'Play':'Pause';pz?clearInterval(tm):tick()}
+else if(d.s){si=+d.s;show();tick()}
+else if(d.g){gen+=+d.g;upd()}
+else if('st' in d)det(O[0].i);
+else if('pv' in d||'ni' in d)det(O[(cur+('ni' in d?1:O.length-1))%O.length].i);
+else if('qr' in d){qi=qs=0;quiz()}else if('nx' in d){qi++;quiz()}
+else if(d.a&&!done){done=true;const[q,a]=Q[qi],o=O.find(x=>x.i==a),ok=d.a==a;qs+=ok;t.classList.add(ok?'ok':'no');if(!ok)document.querySelector(`[data-a="${a}"]`).classList.add('ok');document.getElementById('fb').innerHTML=`${ok?'Right.':'Not quite.'} ${o.i} (${o.f}): ${o.r}. <button class="tab" data-nx>${qi==Q.length-1?'See score':'Next question'}</button>`}});
+document.addEventListener('keydown',e=>{if(e.key=='Escape')go('map');else if(e.key=='f'||e.key=='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}else if(view=='det'&&(e.key=='ArrowRight'||e.key=='ArrowLeft')){det(O[(cur+(e.key=='ArrowRight'?1:O.length-1))%O.length].i)}});
+document.addEventListener('input',e=>{if(e.target.id=='dm')upd()});
+new MutationObserver(()=>{M.classList.remove('v');void M.offsetWidth;M.classList.add('v')}).observe(M,{childList:true});
+map();
+</script></body></html>
